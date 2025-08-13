@@ -210,6 +210,30 @@ function collectAttachmentNames(spineJson) {
 	return Array.from(names);
 }
 
+function shouldPreserveAttachmentObject(attachmentObject) {
+	if (!attachmentObject || typeof attachmentObject !== "object") return false;
+	const preserveKeys = new Set([
+		"type",
+		"lengths",
+		"vertexCount",
+		"vertices",
+		"uvs",
+		"triangles",
+		"hull",
+		"edges",
+		"weights",
+		"path",
+		"end",
+		"closed",
+		"constantSpeed",
+		"color"
+	]);
+	for (const key of Object.keys(attachmentObject)) {
+		if (preserveKeys.has(key)) return true;
+	}
+	return false;
+}
+
 // Provided by user; kept intact except minimal safety defaults
 function extractMinimalSpineStructure(spineJson) {
 	const result = {};
@@ -224,6 +248,10 @@ function extractMinimalSpineStructure(spineJson) {
             images: spineJson.skeleton.images || "./images/",
             audio: spineJson.skeleton.audio || ""
         };
+
+		if(result.skeleton.images) {
+			result.skeleton.images ="./images/";
+		}
     }
  
     // Extract bones (only name and parent)
@@ -243,7 +271,7 @@ function extractMinimalSpineStructure(spineJson) {
         }));
     }
  
-    // Extract skins (only default, slot names, attachment names, width/height)
+    // Extract skins: copy path/mesh/clipping-like attachments as-is; keep region attachments minimal (width/height)
     if (spineJson.skins && spineJson.skins.default) {
         result.skins = { default: {} };
         for (const slotName in spineJson.skins.default) {
@@ -251,22 +279,40 @@ function extractMinimalSpineStructure(spineJson) {
             const slot = spineJson.skins.default[slotName];
             for (const attachmentName in slot) {
                 const attachment = slot[attachmentName];
-                result.skins.default[slotName][attachmentName] = {
-                    width: attachment.width || 0,
-                    height: attachment.height || 0
-                };
+                if (shouldPreserveAttachmentObject(attachment)) {
+                    // Keep full attachment data for complex types (path/mesh/clipping, etc.)
+                    result.skins.default[slotName][attachmentName] = attachment;
+                } else {
+                    // Minimal info for simple region attachments
+                    result.skins.default[slotName][attachmentName] = {
+                        width: attachment.width || 0,
+                        height: attachment.height || 0
+                    };
+                }
             }
         }
     }
- 
-    // Extract animations (preserve as-is)
-    if (spineJson.animations) {
-        result.animations = spineJson.animations;
-    }
 
-	if(spineJson.events) {
-		result.events = spineJson.events;
-	}
+	result.animations = spineJson?.animations;
+	result.events = spineJson?.events;
+ 
+    // Extract animations (only animation names, slots, and slot names, no data)
+    // if (spineJson.animations) {
+    //     result.animations = {};
+    //     for (const animName in spineJson.animations) {
+    //         const anim = spineJson.animations[animName];
+    //         result.animations[animName] = { slots: {} };
+    //         if (anim.slots) {
+    //             for (const slotName in anim.slots) {
+    //                 result.animations[animName].slots[slotName] = {};
+    //             }
+    //         }
+    //     }
+    // }
+
+	// if(spineJson.events) {
+	// 	result.events = spineJson.events;
+	// }
  
     return result;
 }
