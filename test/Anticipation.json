@@ -1,0 +1,550 @@
+{
+    "skeleton": {
+        "hash": "ANDAzG2KBFVqeVmU+LDx0cn5rt0",
+        "spine": "3.7.94",
+        "width": 0,
+        "height": 0,
+        "images": "./images/",
+        "audio": ""
+    },
+    "bones": [
+        {
+            "name": "root"
+        },
+        {
+            "name": "Main",
+            "parent": "root"
+        }
+    ],
+    "slots": [
+        {
+            "name": "Vortex_Front",
+            "bone": "Main",
+            "blend": "additive"
+        },
+        {
+            "name": "Vortex_Back",
+            "bone": "Main",
+            "color": "8af5ffff",
+            "blend": "additive"
+        }
+    ],
+    "skins": {
+        "default": {
+            "Vortex_Back": {
+                "Vortex_Back_00": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_01": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_02": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_03": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_04": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_05": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_06": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_07": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_08": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_09": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_10": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_11": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_12": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_13": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_14": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_15": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_16": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_17": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_18": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_19": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_20": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_21": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_22": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_23": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_24": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_25": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_26": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_27": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_28": {
+                    "width": 130,
+                    "height": 420
+                },
+                "Vortex_Back_29": {
+                    "width": 130,
+                    "height": 420
+                }
+            },
+            "Vortex_Front": {
+                "Vortex_Front_00": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_01": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_02": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_03": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_04": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_05": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_06": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_07": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_08": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_09": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_10": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_11": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_12": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_13": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_14": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_15": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_16": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_17": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_18": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_19": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_20": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_21": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_22": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_23": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_24": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_25": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_26": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_27": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_28": {
+                    "width": 200,
+                    "height": 420
+                },
+                "Vortex_Front_29": {
+                    "width": 200,
+                    "height": 420
+                }
+            }
+        }
+    },
+    "animations": {
+        "Anticipation_Back": {
+            "slots": {
+                "Vortex_Back": {
+                    "attachment": [
+                        {
+                            "time": 0,
+                            "name": "Vortex_Back_00"
+                        },
+                        {
+                            "time": 0.0333,
+                            "name": "Vortex_Back_01"
+                        },
+                        {
+                            "time": 0.0667,
+                            "name": "Vortex_Back_02"
+                        },
+                        {
+                            "time": 0.1,
+                            "name": "Vortex_Back_03"
+                        },
+                        {
+                            "time": 0.1333,
+                            "name": "Vortex_Back_04"
+                        },
+                        {
+                            "time": 0.1667,
+                            "name": "Vortex_Back_05"
+                        },
+                        {
+                            "time": 0.2,
+                            "name": "Vortex_Back_06"
+                        },
+                        {
+                            "time": 0.2333,
+                            "name": "Vortex_Back_07"
+                        },
+                        {
+                            "time": 0.2667,
+                            "name": "Vortex_Back_08"
+                        },
+                        {
+                            "time": 0.3,
+                            "name": "Vortex_Back_09"
+                        },
+                        {
+                            "time": 0.3333,
+                            "name": "Vortex_Back_10"
+                        },
+                        {
+                            "time": 0.3667,
+                            "name": "Vortex_Back_11"
+                        },
+                        {
+                            "time": 0.4,
+                            "name": "Vortex_Back_12"
+                        },
+                        {
+                            "time": 0.4333,
+                            "name": "Vortex_Back_13"
+                        },
+                        {
+                            "time": 0.4667,
+                            "name": "Vortex_Back_14"
+                        },
+                        {
+                            "time": 0.5,
+                            "name": "Vortex_Back_15"
+                        },
+                        {
+                            "time": 0.5333,
+                            "name": "Vortex_Back_16"
+                        },
+                        {
+                            "time": 0.5667,
+                            "name": "Vortex_Back_17"
+                        },
+                        {
+                            "time": 0.6,
+                            "name": "Vortex_Back_18"
+                        },
+                        {
+                            "time": 0.6333,
+                            "name": "Vortex_Back_19"
+                        },
+                        {
+                            "time": 0.6667,
+                            "name": "Vortex_Back_20"
+                        },
+                        {
+                            "time": 0.7,
+                            "name": "Vortex_Back_21"
+                        },
+                        {
+                            "time": 0.7333,
+                            "name": "Vortex_Back_22"
+                        },
+                        {
+                            "time": 0.7667,
+                            "name": "Vortex_Back_23"
+                        },
+                        {
+                            "time": 0.8,
+                            "name": "Vortex_Back_24"
+                        },
+                        {
+                            "time": 0.8333,
+                            "name": "Vortex_Back_25"
+                        },
+                        {
+                            "time": 0.8667,
+                            "name": "Vortex_Back_26"
+                        },
+                        {
+                            "time": 0.9,
+                            "name": "Vortex_Back_27"
+                        },
+                        {
+                            "time": 0.9333,
+                            "name": "Vortex_Back_28"
+                        },
+                        {
+                            "time": 0.9667,
+                            "name": "Vortex_Back_29"
+                        },
+                        {
+                            "time": 1,
+                            "name": "Vortex_Back_00"
+                        },
+                        {
+                            "time": 1.0333,
+                            "name": "Vortex_Back_01"
+                        }
+                    ]
+                }
+            }
+        },
+        "Anticipation_Front": {
+            "slots": {
+                "Vortex_Front": {
+                    "attachment": [
+                        {
+                            "time": 0,
+                            "name": "Vortex_Front_00"
+                        },
+                        {
+                            "time": 0.0333,
+                            "name": "Vortex_Front_01"
+                        },
+                        {
+                            "time": 0.0667,
+                            "name": "Vortex_Front_02"
+                        },
+                        {
+                            "time": 0.1,
+                            "name": "Vortex_Front_03"
+                        },
+                        {
+                            "time": 0.1333,
+                            "name": "Vortex_Front_04"
+                        },
+                        {
+                            "time": 0.1667,
+                            "name": "Vortex_Front_05"
+                        },
+                        {
+                            "time": 0.2,
+                            "name": "Vortex_Front_06"
+                        },
+                        {
+                            "time": 0.2333,
+                            "name": "Vortex_Front_07"
+                        },
+                        {
+                            "time": 0.2667,
+                            "name": "Vortex_Front_08"
+                        },
+                        {
+                            "time": 0.3,
+                            "name": "Vortex_Front_09"
+                        },
+                        {
+                            "time": 0.3333,
+                            "name": "Vortex_Front_10"
+                        },
+                        {
+                            "time": 0.3667,
+                            "name": "Vortex_Front_11"
+                        },
+                        {
+                            "time": 0.4,
+                            "name": "Vortex_Front_12"
+                        },
+                        {
+                            "time": 0.4333,
+                            "name": "Vortex_Front_13"
+                        },
+                        {
+                            "time": 0.4667,
+                            "name": "Vortex_Front_14"
+                        },
+                        {
+                            "time": 0.5,
+                            "name": "Vortex_Front_15"
+                        },
+                        {
+                            "time": 0.5333,
+                            "name": "Vortex_Front_16"
+                        },
+                        {
+                            "time": 0.5667,
+                            "name": "Vortex_Front_17"
+                        },
+                        {
+                            "time": 0.6,
+                            "name": "Vortex_Front_18"
+                        },
+                        {
+                            "time": 0.6333,
+                            "name": "Vortex_Front_19"
+                        },
+                        {
+                            "time": 0.6667,
+                            "name": "Vortex_Front_20"
+                        },
+                        {
+                            "time": 0.7,
+                            "name": "Vortex_Front_21"
+                        },
+                        {
+                            "time": 0.7333,
+                            "name": "Vortex_Front_22"
+                        },
+                        {
+                            "time": 0.7667,
+                            "name": "Vortex_Front_23"
+                        },
+                        {
+                            "time": 0.8,
+                            "name": "Vortex_Front_24"
+                        },
+                        {
+                            "time": 0.8333,
+                            "name": "Vortex_Front_25"
+                        },
+                        {
+                            "time": 0.8667,
+                            "name": "Vortex_Front_26"
+                        },
+                        {
+                            "time": 0.9,
+                            "name": "Vortex_Front_27"
+                        },
+                        {
+                            "time": 0.9333,
+                            "name": "Vortex_Front_28"
+                        },
+                        {
+                            "time": 0.9667,
+                            "name": "Vortex_Front_29"
+                        },
+                        {
+                            "time": 1,
+                            "name": "Vortex_Front_00"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

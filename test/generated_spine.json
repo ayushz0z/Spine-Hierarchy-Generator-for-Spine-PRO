@@ -1,0 +1,1144 @@
+{
+  "skeleton": {
+    "hash": "2BwqSDxJ1Su3ANiaTY6JbKUxXnk",
+    "spine": "3.7.94",
+    "width": 139.92,
+    "height": 142.63,
+    "images": "./images/",
+    "audio": ""
+  },
+  "bones": [
+    {
+      "name": "root"
+    },
+    {
+      "name": "Main",
+      "parent": "root"
+    },
+    {
+      "name": "Coin1",
+      "parent": "Main"
+    },
+    {
+      "name": "Coin_Rotate",
+      "parent": "Main"
+    },
+    {
+      "name": "Coin2",
+      "parent": "Main"
+    },
+    {
+      "name": "Coin3",
+      "parent": "Main"
+    },
+    {
+      "name": "Coin4",
+      "parent": "Main"
+    },
+    {
+      "name": "Coin5",
+      "parent": "Main"
+    },
+    {
+      "name": "Mask",
+      "parent": "Main"
+    },
+    {
+      "name": "bone",
+      "parent": "Main"
+    },
+    {
+      "name": "bone2",
+      "parent": "Main"
+    },
+    {
+      "name": "bone3",
+      "parent": "Main"
+    }
+  ],
+  "slots": [
+    {
+      "name": "Path",
+      "bone": "Main"
+    },
+    {
+      "name": "Path_Portrait",
+      "bone": "Main"
+    },
+    {
+      "name": "Coin",
+      "bone": "Coin1"
+    },
+    {
+      "name": "Coin_Shine",
+      "bone": "Coin1"
+    },
+    {
+      "name": "Coin_Shine_Add",
+      "bone": "Coin1"
+    },
+    {
+      "name": "Flip5",
+      "bone": "Coin5"
+    },
+    {
+      "name": "Flip4",
+      "bone": "Coin4"
+    },
+    {
+      "name": "Flip3",
+      "bone": "Coin3"
+    },
+    {
+      "name": "Fllip2",
+      "bone": "Coin2"
+    },
+    {
+      "name": "Flip",
+      "bone": "Coin1"
+    },
+    {
+      "name": "Mask",
+      "bone": "Mask"
+    }
+  ],
+  "transform": [
+    {
+      "name": "Coin_Rotate_Constraint",
+      "order": 2,
+      "bones": [
+        "Coin5",
+        "Coin4",
+        "Coin3",
+        "Coin2",
+        "Coin1"
+      ],
+      "target": "Coin_Rotate",
+      "rotateMix": 360,
+      "translateMix": 0,
+      "scaleMix": 0,
+      "shearMix": 0
+    }
+  ],
+  "path": [
+    {
+      "name": "Path_Constraint",
+      "order": 0,
+      "bones": [
+        "Coin5",
+        "Coin4",
+        "Coin3",
+        "Coin2",
+        "Coin1"
+      ],
+      "target": "Path",
+      "spacingMode": "percent",
+      "rotation": -180,
+      "rotateMix": 0
+    },
+    {
+      "name": "Path_Constraint_Portrait",
+      "order": 1,
+      "bones": [
+        "Coin5",
+        "Coin4",
+        "Coin3",
+        "Coin2",
+        "Coin1"
+      ],
+      "target": "Path_Portrait",
+      "spacingMode": "percent",
+      "rotateMix": 0
+    }
+  ],
+  "skins": {
+    "default": {
+      "Coin": {
+        "Sym0_Coin": {
+          "width": 918,
+          "height": 934
+        }
+      },
+      "Coin_Shine": {
+        "Sym0_Shine": {
+          "width": 1318,
+          "height": 1334
+        }
+      },
+      "Coin_Shine_Add": {
+        "Sym0_Shine": {
+          "width": 1318,
+          "height": 1334
+        }
+      },
+      "Flip": {
+        "Sym0_Coin_Flip_00": {
+          "width": 860,
+          "height": 880
+        },
+        "Sym0_Coin_Flip_01": {
+          "width": 860,
+          "height": 880
+        },
+        "Sym0_Coin_Flip_02": {
+          "width": 860,
+          "height": 880
+        },
+        "Sym0_Coin_Flip_03": {
+          "width": 860,
+          "height": 880
+        },
+        "Sym0_Coin_Flip_04": {
+          "width": 860,
+          "height": 880
+        }
+      },
+      "Flip3": {
+        "Sym0_Coin_Flip_00": {
+          "width": 860,
+          "height": 880
+        },
+        "Sym0_Coin_Flip_01": {
+          "width": 860,
+          "height": 880
+        },
+        "Sym0_Coin_Flip_02": {
+          "width": 860,
+          "height": 880
+        },
+        "Sym0_Coin_Flip_03": {
+          "width": 860,
+          "height": 880
+        },
+        "Sym0_Coin_Flip_04": {
+          "width": 860,
+          "height": 880
+        }
+      },
+      "Flip4": {
+        "Sym0_Coin_Flip_00": {
+          "width": 860,
+          "height": 880
+        },
+        "Sym0_Coin_Flip_01": {
+          "width": 860,
+          "height": 880
+        },
+        "Sym0_Coin_Flip_02": {
+          "width": 860,
+          "height": 880
+        },
+        "Sym0_Coin_Flip_03": {
+          "width": 860,
+          "height": 880
+        },
+        "Sym0_Coin_Flip_04": {
+          "width": 860,
+          "height": 880
+        }
+      },
+      "Flip5": {
+        "Sym0_Coin_Flip_00": {
+          "width": 860,
+          "height": 880
+        },
+        "Sym0_Coin_Flip_01": {
+          "width": 860,
+          "height": 880
+        },
+        "Sym0_Coin_Flip_02": {
+          "width": 860,
+          "height": 880
+        },
+        "Sym0_Coin_Flip_03": {
+          "width": 860,
+          "height": 880
+        },
+        "Sym0_Coin_Flip_04": {
+          "width": 860,
+          "height": 880
+        }
+      },
+      "Fllip2": {
+        "Sym0_Coin_Flip_00": {
+          "width": 860,
+          "height": 880
+        },
+        "Sym0_Coin_Flip_01": {
+          "width": 860,
+          "height": 880
+        },
+        "Sym0_Coin_Flip_02": {
+          "width": 860,
+          "height": 880
+        },
+        "Sym0_Coin_Flip_03": {
+          "width": 860,
+          "height": 880
+        },
+        "Sym0_Coin_Flip_04": {
+          "width": 860,
+          "height": 880
+        }
+      },
+      "Mask": {
+        "Mask": {
+          "type": "clipping",
+          "end": "Mask",
+          "vertexCount": 4,
+          "vertices": [
+            0.24,
+            -1.24,
+            1641.71,
+            66.57,
+            1661.49,
+            876.77,
+            0.3,
+            886.85
+          ],
+          "color": "ce3a3aff"
+        }
+      },
+      "Path": {
+        "Coin_Path": {
+          "type": "path",
+          "lengths": [
+            645.21,
+            1422.41
+          ],
+          "vertexCount": 6,
+          "vertices": [
+            1136.88,
+            1933.73,
+            -395.62,
+            1941.07,
+            -2135.09,
+            1949.4,
+            -3670.09,
+            503.09,
+            -3637.76,
+            -1412.48,
+            -3606.23,
+            -3280.29
+          ]
+        }
+      },
+      "Path_Portrait": {
+        "Coin_Path_Portrait": {
+          "type": "path",
+          "lengths": [
+            368.85,
+            824.95
+          ],
+          "vertexCount": 6,
+          "vertices": [
+            -407.18,
+            408.6,
+            -395.62,
+            1941.07,
+            -391.45,
+            2494.36,
+            -294.93,
+            5622.9,
+            -156.65,
+            4037.63,
+            5.68,
+            2176.62
+          ]
+        }
+      }
+    }
+  },
+  "animations": {
+    "Col_0": {
+      "deform": {
+        "default": {
+          "Path": {
+            "Coin_Path": [
+              {
+                "time": 0,
+                "offset": 1,
+                "vertices": [
+                  -0.76444,
+                  0,
+                  0,
+                  164.03955,
+                  0,
+                  493.84082,
+                  169.88782,
+                  290.54492,
+                  1375.2631,
+                  -178.185,
+                  1426.8778
+                ]
+              }
+            ]
+          },
+          "Path_Portrait": {
+            "Coin_Path_Portrait": [
+              {
+                "time": 0,
+                "vertices": [
+                  1071.5511,
+                  425.66418,
+                  0,
+                  0,
+                  -1364.9027,
+                  867.54346,
+                  -573.9983,
+                  171.1206,
+                  -546.3916,
+                  1302.1123,
+                  -67.95287,
+                  1408.3789
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Col_1": {
+      "deform": {
+        "default": {
+          "Path": {
+            "Coin_Path": [
+              {
+                "time": 0,
+                "vertices": [
+                  1013.1979,
+                  10.02323,
+                  1013.1824,
+                  0,
+                  222.27954,
+                  -12.76025,
+                  360.91113,
+                  107.68823,
+                  262.77686,
+                  1713.1113,
+                  -156.43985,
+                  1753.5171
+                ]
+              }
+            ]
+          },
+          "Path_Portrait": {
+            "Coin_Path_Portrait": [
+              {
+                "time": 0,
+                "vertices": [
+                  482.57507,
+                  99.14065,
+                  1013.3827,
+                  0,
+                  1931.3496,
+                  1883.6709,
+                  151.02429,
+                  199.74512,
+                  -48.91164,
+                  1404.4004,
+                  -509.95703,
+                  1421.3707
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Col_2": {
+      "deform": {
+        "default": {
+          "Path": {
+            "Coin_Path": [
+              {
+                "time": 0,
+                "vertices": [
+                  2028.3765,
+                  2.91402,
+                  2028.3654,
+                  0,
+                  878.48535,
+                  0.01538,
+                  1143.6216,
+                  134.70459,
+                  888.75977,
+                  1631.136,
+                  -18.75662,
+                  1848.9886
+                ]
+              }
+            ]
+          },
+          "Path_Portrait": {
+            "Coin_Path_Portrait": [
+              {
+                "time": 0,
+                "vertices": [
+                  1711.2809,
+                  35.32655,
+                  2027.0631,
+                  0,
+                  2662.0225,
+                  2369.8547,
+                  223.75818,
+                  380.2339,
+                  -0.00095,
+                  1613.9531,
+                  -603.69006,
+                  1659.773
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Col_3": {
+      "deform": {
+        "default": {
+          "Path": {
+            "Coin_Path": [
+              {
+                "time": 0,
+                "vertices": [
+                  3043.5786,
+                  8.42196,
+                  3043.5625,
+                  0,
+                  633.0036,
+                  -11.25708,
+                  1358.6082,
+                  108.59259,
+                  1045.6011,
+                  1662.5037,
+                  -131.24747,
+                  2054.5234
+                ]
+              }
+            ]
+          },
+          "Path_Portrait": {
+            "Coin_Path_Portrait": [
+              {
+                "time": 0,
+                "vertices": [
+                  2650.7363,
+                  54.1208,
+                  3043.0044,
+                  0,
+                  3712.5723,
+                  1913.1584,
+                  882.47925,
+                  317.82373,
+                  528.1534,
+                  1515.583,
+                  -543.84424,
+                  1744.962
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Collect": {
+      "slots": {
+        "Coin": {
+          "attachment": [
+            {
+              "time": 0,
+              "name": "Sym0_Coin"
+            },
+            {
+              "time": 0.3667,
+              "name": null
+            }
+          ]
+        },
+        "Coin_Shine": {
+          "color": [
+            {
+              "time": 0,
+              "color": "ffffff00",
+              "curve": [
+                0,
+                0.6,
+                0.003,
+                1
+              ]
+            },
+            {
+              "time": 0.3333,
+              "color": "ffffffff"
+            }
+          ],
+          "attachment": [
+            {
+              "time": 0.3667,
+              "name": null
+            }
+          ]
+        },
+        "Coin_Shine_Add": {
+          "color": [
+            {
+              "time": 0,
+              "color": "ffffff00",
+              "curve": [
+                0,
+                0.6,
+                0.003,
+                1
+              ]
+            },
+            {
+              "time": 0.3333,
+              "color": "ffffff5a"
+            }
+          ],
+          "attachment": [
+            {
+              "time": 0.3667,
+              "name": null
+            }
+          ]
+        },
+        "Flip": {
+          "attachment": [
+            {
+              "time": 0.3667,
+              "name": "Sym0_Coin_Flip_00"
+            },
+            {
+              "time": 0.4,
+              "name": "Sym0_Coin_Flip_01"
+            },
+            {
+              "time": 0.4333,
+              "name": "Sym0_Coin_Flip_02"
+            },
+            {
+              "time": 0.4667,
+              "name": "Sym0_Coin_Flip_03"
+            },
+            {
+              "time": 0.5,
+              "name": "Sym0_Coin_Flip_04"
+            },
+            {
+              "time": 0.5333,
+              "name": "Sym0_Coin_Flip_00"
+            },
+            {
+              "time": 0.5667,
+              "name": "Sym0_Coin_Flip_01"
+            },
+            {
+              "time": 0.6,
+              "name": null
+            }
+          ]
+        },
+        "Flip3": {
+          "attachment": [
+            {
+              "time": 0.3667,
+              "name": "Sym0_Coin_Flip_03"
+            },
+            {
+              "time": 0.4,
+              "name": "Sym0_Coin_Flip_04"
+            },
+            {
+              "time": 0.4333,
+              "name": "Sym0_Coin_Flip_00"
+            },
+            {
+              "time": 0.4667,
+              "name": "Sym0_Coin_Flip_01"
+            },
+            {
+              "time": 0.5,
+              "name": "Sym0_Coin_Flip_02"
+            },
+            {
+              "time": 0.5333,
+              "name": "Sym0_Coin_Flip_03"
+            },
+            {
+              "time": 0.5667,
+              "name": "Sym0_Coin_Flip_04"
+            },
+            {
+              "time": 0.6,
+              "name": null
+            }
+          ]
+        },
+        "Flip4": {
+          "attachment": [
+            {
+              "time": 0.3667,
+              "name": "Sym0_Coin_Flip_02"
+            },
+            {
+              "time": 0.4,
+              "name": "Sym0_Coin_Flip_03"
+            },
+            {
+              "time": 0.4333,
+              "name": "Sym0_Coin_Flip_04"
+            },
+            {
+              "time": 0.4667,
+              "name": "Sym0_Coin_Flip_00"
+            },
+            {
+              "time": 0.5,
+              "name": "Sym0_Coin_Flip_01"
+            },
+            {
+              "time": 0.5333,
+              "name": "Sym0_Coin_Flip_02"
+            },
+            {
+              "time": 0.5667,
+              "name": "Sym0_Coin_Flip_03"
+            },
+            {
+              "time": 0.6,
+              "name": null
+            }
+          ]
+        },
+        "Flip5": {
+          "attachment": [
+            {
+              "time": 0.3667,
+              "name": "Sym0_Coin_Flip_01"
+            },
+            {
+              "time": 0.4,
+              "name": "Sym0_Coin_Flip_02"
+            },
+            {
+              "time": 0.4333,
+              "name": "Sym0_Coin_Flip_03"
+            },
+            {
+              "time": 0.4667,
+              "name": "Sym0_Coin_Flip_04"
+            },
+            {
+              "time": 0.5,
+              "name": "Sym0_Coin_Flip_00"
+            },
+            {
+              "time": 0.5333,
+              "name": "Sym0_Coin_Flip_01"
+            },
+            {
+              "time": 0.5667,
+              "name": "Sym0_Coin_Flip_02"
+            },
+            {
+              "time": 0.6,
+              "name": null
+            }
+          ]
+        },
+        "Fllip2": {
+          "attachment": [
+            {
+              "time": 0.3667,
+              "name": "Sym0_Coin_Flip_04"
+            },
+            {
+              "time": 0.4,
+              "name": "Sym0_Coin_Flip_00"
+            },
+            {
+              "time": 0.4333,
+              "name": "Sym0_Coin_Flip_01"
+            },
+            {
+              "time": 0.4667,
+              "name": "Sym0_Coin_Flip_02"
+            },
+            {
+              "time": 0.5,
+              "name": "Sym0_Coin_Flip_03"
+            },
+            {
+              "time": 0.5333,
+              "name": "Sym0_Coin_Flip_04"
+            },
+            {
+              "time": 0.5667,
+              "name": "Sym0_Coin_Flip_00"
+            },
+            {
+              "time": 0.6,
+              "name": null
+            }
+          ]
+        }
+      },
+      "bones": {
+        "Coin1": {
+          "rotate": [
+            {
+              "time": 0.3333,
+              "angle": 0,
+              "curve": [
+                0.469,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "time": 0.6,
+              "angle": -1
+            }
+          ],
+          "scale": [
+            {
+              "time": 0,
+              "x": 1,
+              "y": 1,
+              "curve": [
+                0,
+                0.37,
+                0.013,
+                0.7
+              ]
+            },
+            {
+              "time": 0.1,
+              "x": 1.5,
+              "y": 1.5,
+              "curve": [
+                0.048,
+                0.62,
+                0.24,
+                1
+              ]
+            },
+            {
+              "time": 0.3333,
+              "x": 1.25,
+              "y": 1.25,
+              "curve": [
+                0.358,
+                0,
+                1,
+                0.39
+              ]
+            },
+            {
+              "time": 0.5333,
+              "x": 0.4,
+              "y": 0.4
+            }
+          ]
+        },
+        "Coin2": {
+          "rotate": [
+            {
+              "time": 0.3333,
+              "angle": 0,
+              "curve": [
+                0.469,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "time": 0.6,
+              "angle": -1
+            }
+          ],
+          "scale": [
+            {
+              "time": 0.3333,
+              "x": 1.25,
+              "y": 1.25,
+              "curve": [
+                0.358,
+                0,
+                1,
+                0.39
+              ]
+            },
+            {
+              "time": 0.5333,
+              "x": 0.4,
+              "y": 0.4
+            }
+          ]
+        },
+        "Coin3": {
+          "rotate": [
+            {
+              "time": 0.3333,
+              "angle": 0,
+              "curve": [
+                0.469,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "time": 0.6,
+              "angle": -1
+            }
+          ],
+          "scale": [
+            {
+              "time": 0.3333,
+              "x": 1.25,
+              "y": 1.25,
+              "curve": [
+                0.358,
+                0,
+                1,
+                0.39
+              ]
+            },
+            {
+              "time": 0.5333,
+              "x": 0.4,
+              "y": 0.4
+            }
+          ]
+        },
+        "Coin4": {
+          "rotate": [
+            {
+              "time": 0.3333,
+              "angle": 0,
+              "curve": [
+                0.469,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "time": 0.6,
+              "angle": -1
+            }
+          ],
+          "scale": [
+            {
+              "time": 0.3333,
+              "x": 1.25,
+              "y": 1.25,
+              "curve": [
+                0.358,
+                0,
+                1,
+                0.39
+              ]
+            },
+            {
+              "time": 0.5333,
+              "x": 0.4,
+              "y": 0.4
+            }
+          ]
+        },
+        "Coin5": {
+          "rotate": [
+            {
+              "time": 0.3333,
+              "angle": 0,
+              "curve": [
+                0.469,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "time": 0.6,
+              "angle": -1
+            }
+          ],
+          "scale": [
+            {
+              "time": 0.3333,
+              "x": 1.25,
+              "y": 1.25,
+              "curve": [
+                0.358,
+                0,
+                1,
+                0.39
+              ]
+            },
+            {
+              "time": 0.5333,
+              "x": 0.4,
+              "y": 0.4
+            }
+          ]
+        }
+      },
+      "paths": {
+        "Path_Constraint": {
+          "position": [
+            {
+              "time": 0.3333,
+              "curve": [
+                0.543,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "time": 0.6,
+              "position": 1
+            }
+          ],
+          "spacing": [
+            {
+              "time": 0.3333
+            },
+            {
+              "time": 0.4,
+              "spacing": 0.09
+            }
+          ]
+        },
+        "Path_Constraint_Portrait": {
+          "position": [
+            {
+              "time": 0.3333,
+              "curve": [
+                0.543,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "time": 0.6,
+              "position": 1
+            }
+          ],
+          "spacing": [
+            {
+              "time": 0.3333
+            },
+            {
+              "time": 0.4,
+              "spacing": 0.09
+            }
+          ]
+        }
+      }
+    },
+    "Desktop": {
+      "bones": {
+        "Mask": {
+          "translate": [
+            {
+              "time": 0,
+              "x": 0,
+              "y": 0
+            }
+          ]
+        }
+      },
+      "paths": {
+        "Path_Constraint": {
+          "mix": [
+            {
+              "time": 0,
+              "rotateMix": 0
+            }
+          ]
+        },
+        "Path_Constraint_Portrait": {
+          "mix": [
+            {
+              "time": 0,
+              "rotateMix": 0,
+              "translateMix": 0
+            }
+          ]
+        }
+      }
+    },
+    "Landscape": {
+      "bones": {
+        "Mask": {
+          "translate": [
+            {
+              "time": 0,
+              "x": -99.32,
+              "y": -53.11
+            }
+          ]
+        }
+      },
+      "paths": {
+        "Path_Constraint": {
+          "mix": [
+            {
+              "time": 0,
+              "rotateMix": 0
+            }
+          ]
+        },
+        "Path_Constraint_Portrait": {
+          "mix": [
+            {
+              "time": 0,
+              "rotateMix": 0,
+              "translateMix": 0
+            }
+          ]
+        }
+      }
+    },
+    "Portrait": {
+      "bones": {
+        "Mask": {
+          "translate": [
+            {
+              "time": 0,
+              "x": 3327.94,
+              "y": 5380.32
+            }
+          ]
+        }
+      },
+      "paths": {
+        "Path_Constraint": {
+          "mix": [
+            {
+              "time": 0,
+              "rotateMix": 0,
+              "translateMix": 0
+            }
+          ]
+        },
+        "Path_Constraint_Portrait": {
+          "mix": [
+            {
+              "time": 0,
+              "rotateMix": 0
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -226,7 +226,10 @@ function shouldPreserveAttachmentObject(attachmentObject) {
 		"end",
 		"closed",
 		"constantSpeed",
-		"color"
+		"color",
+		"Path_Portrait",
+		"Path",
+		"Mask"
 	]);
 	for (const key of Object.keys(attachmentObject)) {
 		if (preserveKeys.has(key)) return true;
@@ -270,7 +273,10 @@ function extractMinimalSpineStructure(spineJson) {
             bone: slot.bone
         }));
     }
- 
+
+	result.transform = spineJson?.transform;
+	result.path = spineJson?.path; 
+	
     // Extract skins: copy path/mesh/clipping-like attachments as-is; keep region attachments minimal (width/height)
     if (spineJson.skins && spineJson.skins.default) {
         result.skins = { default: {} };
