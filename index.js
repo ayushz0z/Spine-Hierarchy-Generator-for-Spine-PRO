@@ -154,6 +154,51 @@ function createOnePixelPng(filePath, metadataObject) {
 	});
 }
 
+function createBlankPng(filePath, width, height, metadataObject) {
+	return new Promise((resolve, reject) => {
+		const w = Math.max(1, Number(width) || 1);
+		const h = Math.max(1, Number(height) || 1);
+		const png = new PNG({ width: w, height: h, colorType: 6 });
+		for (let y = 0; y < h; y += 1) {
+			for (let x = 0; x < w; x += 1) {
+				const idx = (w * y + x) << 2;
+				png.data[idx] = 255;
+				png.data[idx + 1] = 255;
+				png.data[idx + 2] = 255;
+				png.data[idx + 3] = 255;
+			}
+		}
+
+		png.pack();
+		const buffers = [];
+		png.on("data", (d) => buffers.push(d));
+		png.on("error", reject);
+		png.on("end", () => {
+			try {
+				const pngBuffer = Buffer.concat(buffers);
+				const existingChunks = extractChunks(pngBuffer);
+				const outChunks = [];
+				let injected = false;
+				for (const ch of existingChunks) {
+					outChunks.push(ch);
+					if (!injected && ch.name === "IHDR" && metadataObject) {
+						const tChunk = textChunk.encode("spine_data", JSON.stringify(metadataObject));
+						outChunks.push(tChunk);
+						injected = true;
+					}
+				}
+				const finalPng = Buffer.from(encodeChunks(outChunks));
+				fs.writeFile(filePath, finalPng, (err) => {
+					if (err) return reject(err);
+					resolve();
+				});
+			} catch (e) {
+				reject(e);
+			}
+		});
+	});
+}
+
 function createImageFromTemplate(templatePath, outPath, metadataObject) {
 	return new Promise((resolve, reject) => {
 		fs.readFile(templatePath, (readErr, templateBuffer) => {
@@ -370,6 +415,38 @@ async function main() {
 	let created = 0;
 	let skipped = 0;
 
+	// Find width/height for a given attachment name from skins
+	function findAttachmentSize(json, name) {
+		if (!json || !json.skins) return { width: 0, height: 0 };
+		const scanAttachmentsRoot = (attachmentsRoot) => {
+			for (const slotName in attachmentsRoot) {
+				const slot = attachmentsRoot[slotName];
+				for (const attName in slot) {
+					if (attName === name) {
+						const att = slot[attName];
+						const w = Number(att.width) || 0;
+						const h = Number(att.height) || 0;
+						if (w > 0 && h > 0) return { width: w, height: h };
+					}
+				}
+			}
+			return null;
+		};
+		if (Array.isArray(json.skins)) {
+			for (const skin of json.skins) {
+				const attachmentsRoot = skin.attachments || skin;
+				const res = scanAttachmentsRoot(attachmentsRoot);
+				if (res) return res;
+			}
+		} else {
+			for (const skinName in json.skins) {
+				const res = scanAttachmentsRoot(json.skins[skinName]);
+				if (res) return res;
+			}
+		}
+		return { width: 0, height: 0 };
+	}
+
 	for (const attachmentName of attachmentNames) {
 		if (!attachmentName) continue;
 		const safeName = sanitizeFilename(attachmentName);
@@ -381,11 +458,10 @@ async function main() {
 		}
 
 		try {
-			if (templatePath) {
-				await createImageFromTemplate(templatePath, outPath);
-			} else {
-				await createOnePixelPng(outPath);
-			}
+			const size = findAttachmentSize(spineJson, attachmentName);
+			const w = size.width > 0 ? size.width : 2;
+			const h = size.height > 0 ? size.height : 2;
+			await createBlankPng(outPath, w, h);
 			created += 1;
 		} catch (err) {
 			console.error(`Failed creating image for attachment '${attachmentName}':`, err.message);
